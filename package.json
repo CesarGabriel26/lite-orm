@@ -1,0 +1,49 @@
+{
+  "name": "@raymondfox/lite-orm",
+  "version": "1.0.0",
+  "description": "Mini ORM moderna, tipada e de alta performance focada em PostgreSQL com JSONB relations e Query Builders nativos.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "publish:lib": "npm run typecheck && npm run build && npm publish --access public"
+  },
+  "keywords": [
+    "postgres",
+    "postgresql",
+    "orm",
+    "database",
+    "sql",
+    "typescript",
+    "jsonb",
+    "decorators"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "pg": "^8.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/pg": "^8.11.0",
+    "pg": "^8.11.3",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3"
+  }
+}
